@@ -13,3 +13,5 @@
 
 * What is a merge conflict?
     A merge conflict happens when the proposed changes in a pull request conflict with other changes that have been made in the same file.  A lot of times this happens because of extra whitespace or an IDE that is automatically formatting its output.  You can open the file where the conflict occurs and delete the code that you don't want along with extra markers git has added to point out the conflict (i.e. ====, <<<, >>>>) as well as branch names to denote the source of the conflict. 
+
+    added a word
