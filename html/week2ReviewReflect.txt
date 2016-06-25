@@ -1,32 +1,40 @@
-Briefly describe your understanding of what the browser does, including definitions of the following:
-client
-server
-render
+**Briefly describe your understanding of what the browser does, including definitions of the following:**
+*client
+*server
+*render
 
-A browser is 
+The web is simply a network of computers that all talk to each other and your browser is a computer program that can display, or **RENDER**, pages that are written in HTML, the language of web pages, on your computer screen.  In order to display these web pages, your browser (which is also referred to as the **client**) has to *request* them from another computer, a server, in order to receive the information to render the web page on your screen.  
 
-What is HTML? In your answer, include definitions of the following:
-tag
-element
-node
-attribute
-block element
-inline element
+Your browser is called a **client** because it receives this information and then displays it, so it is being "served" these web pages.  And who is doing the serving, you might ask? Well, web **SERVERS** of course! They are just other computers that have all this information on how to display specific web pages stored in its hard drive and send the information over to the **client** that requested it whenever they submit that request.  This transaction usually takes milliseconds.  And that's how web pages show up on your computer. 
 
-HTML is an acronym that stands for Hyper Text Markup Language.  
+**What is HTML? In your answer, include definitions of the following:**
+*tag
+*element
+*node
+*attribute
+*block element
+*inline element
 
-Very briefly, explain the purpose of the following elements:
-head - 
-body - contains the content that will actually be rendered in the browser
-p - paragraph
-form - consists of an input field 
-div - short for a division, it is simply a 
-span - 
-select - 
-h2 - this is a type of header with a 2nd degree importance 
-ol - ordered list
-ul - unordered list
-table - 
-tr - table row, 
-td - table data, 
-Rubric - 
+
+HTML is an acronym that stands for Hyper Text Markup Language.  It is the language that web pages are written in.  It isn't a language per se, but rather a collection of markup **tags** that tell your browser how to display certain elements of a web page.  **Elements** are the building blocks of web pages and everything you can see on the page is pretty much an element, including text, pictures, and links.  Different elements are rendered (or displayed) differently on the page, which is why we give them different tags.  A header, for example, will display differently than a paragraph on the page, and these tags will also tell the browser their relative importance on the page.  
+
+**Attributes** on the other hand are properties of elements that can change how they render on the page.  Style, for example, is a common attribute of elements that allow the programmer to change how the element is displayed.  Links have href attributes that tell the browser what web page they link to.  
+
+HTML elements are usually either block elements or inline elements, which tells us how much space they take up on the page by default.  A **block element** takes up the entire width of the page (or the width of whatever it is located inside of) while **inline elements** display on the same line as other elements.  Block elements have a new line before and after them so they can be thought of as liking their own space, and taking up all the space that they can, while inline elements don't mind sharing space with other elements.  There are several elements that can be block elements or function as inline elements, depending on how we tell the browser to display it.  
+
+**Very briefly, explain the purpose of the following elements:**
+
+**head -** this is the part of the html document that contains metadata about it such as scripts that the page will run or styles that will be applied to the elements on the page as well as the page title (which will display in the browser tab or at the top of the browser) and keyword metadata
+**body -** contains the content that will actually be rendered in the browser, made up of elements
+**p -** paragraph, this is a plain block of text that are separated from other elements by a new line before and after it (block element)
+**form -** consists of an input field and a submit button and is used to send data in a packet or bundle to another computer 
+**div -** short for a division, it is simply a way to group elements, usually to style them together and visually separate them from other elements on the page.  Divs are block level elements and so they will be separated with a new line preceding AND following it
+**span -** A span is similar to a div in that it is a way to group elements, but serves as an INLINE element rather than as a block level one.  It is usually used to style a group of elements or content or because they share attribute values such as language. 
+**select -** this is a type of form input field that is also known as a "drop down menu", and contains one or more "option" elements nested inside of it
+**h2 -** this is a type of header with a 2nd degree importance 
+**ol -** ordered list, this is an element that contains one or more "list items" inside of it and will display them with a number in front of each one starting with the number 1, typically one underneath the other (but can also be styled differently)
+**ul -** unordered list, this is an element that contains one or more "list items" nested inside of it and will display them with a symbol such as a dot in front of them, but can be changed in styling to be something else or eliminated completely, typically one underneath the other (but can also be styled differently)
+table - format of displaying data in cells, tables can be of any number of rows and columns and usually have a header row to title the columns
+**tr -** table row, it is an element that is nested inside of a table and that has one or more "<td>" elements nested inside of it containing the data that will actually be displayed in the table vertically across the row and is a way to visually group data. 
+**td -** table data, is an element nested inside of of a table row "tr", which is nested inside of a table element on an html page.  td's represent the actual data that will be displayed in one of the cells of the table.  
+**Rubric -** a scoring guide meant to help with grading a student's responses to questions or prompts, usually containing key criteria and/or definitions for evaluating these responses and a scoring strategy or metrics.  These are usually presented in tables for ease of use.  
