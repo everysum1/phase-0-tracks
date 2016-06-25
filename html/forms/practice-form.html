@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Practice Form</title>
+  <style>
+    div {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center">Ice Cream Heaven Survey</h1>
+
+  <form style="width: 650px" action="success.html" method="post">  
+    <fieldset>
+      <legend> Basic Info </legend>
+      <div>
+        <label>First Name:</label>
+        <input type="text" name="fname" />
+        <label>Last Name:</label>
+        <input type="text" name="lname" />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <label>Password:</label>
+        <input type="password" name="password" />
+      </div>
+
+    </fieldset>
+    <fieldset>
+    <legend> Ice Cream </legend>
+      <div>
+        <label>Favorite Flavor: </label>
+        <select name="favIcecream">
+          <option value="flavor">Vanilla</option>
+          <option value="flavor">Chocolate</option>
+          <option value="flavor">Strawberry</option>
+          <option value="flavor">Pistachio</option>
+          <option value="flavor">Orange Sherbert</option>
+        </select>
+      </div>
+      <div>
+        <textarea name="description" rows="5" cols="60">Describe your perfect ice cream parlor...</textarea>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend> Favorite Cone </legend>
+        <p>
+        <label>
+          <input type="radio" name="cone" value="waffle">
+          Waffle
+        </label>
+        </p>
+        <p>
+        <label>
+          <input type="radio" name="cone" value="sugar">
+          Sugar
+        </label>
+        </p>
+        <p>
+        <label>
+          <input type="radio" name="cone" value="noCone">
+          No Cone (cup)
+        </label>
+        </p>      
+    </fieldset>
+    <fieldset>
+      <legend> Toppings </legend>
+      <p>
+      <input type="checkbox" name="rainbowSprinkles">
+      <label>Rainbow Sprinkles</label>
+      </p>
+      <p>
+      <input type="checkbox" name="chocSprinkles">
+      <label>Chocolate Sprinkles</label>
+      </p>
+      <p>
+      <input type="checkbox" name="nuts">
+      <label>Nuts</label>
+      </p>
+      <p>
+      <input type="checkbox" name="coco">
+      <label>Coconut</label>
+      </p>
+      <p>
+      <input type="checkbox" name="m&ms">
+      <label>M&Ms</label>
+      </p>
+      <p>
+      <input type="checkbox" name="bfinger">
+      <label>Butterfinger</label>
+      </p>
+      <p>
+      <input type="checkbox" name="gummi">
+      <label>Gummi Bears</label>
+      </p>
+    </fieldset>
+    <div style="padding-left: 0px">
+        <button style="width: 650px" type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>
