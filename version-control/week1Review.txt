@@ -1,0 +1,137 @@
+Command line: 
+  -shell: an interface that lets you access the "stuff" inside your computer.  Using the 
+    command line interface (CLI) in this lesson, we were able to learn how to navigate the  
+    file system in our computer, move, create and open files and directories, as well as 
+    remove them using a SHELL, which is a text-based interface.  BASH is a type of shell 
+    program that we can use to interact with our computer's file system.  We could have 
+    also used the GUI (graphical user interface) to do it which would be with our mouse 
+    clicks and drags using icons that represent the files and directories in our computer 
+    with pictures.  
+  -pwd: 'Print Working Directory', this shell command informs you what directory you are currently
+    in as well as the path to that directory from your ROOT directory
+  -ls: 'list', this command LISTS the files and directories in the current directory
+  -mv: 'move', this command takes two arguments, the file to be moved and the target directory.
+    It then MOVES files to other directories.  If no separate directory is provided as a 
+    second argument and instead another file name is provided (the current directory is 
+    referenced) then the 'mv' command will serve to change the name of the file in the current
+    directory to the second argument provided.
+  -cd: 'Change Directory', changes the current directory.  If provided no arguments, it will
+    change to the ROOT directory.  If one argument is provided (must be subdirectory, path or '..')
+		it will change to the provided subdirectory, path (if it is valid path) or parent directory 
+		in the case of '..'
+  -touch: using this command and providing it a filename as an argument will create a file with
+		the provided filename in the current directory 
+  -mkdir: 'make directory', this command when provided a directory name as an argument will create
+		a new directory with the provided directory name as its name 
+  -rm: 'remove' when provided with a file or directory as an argument, will remove the specified 
+		directory.  This is a DELETE command.  Directories need to be removed RECURSIVELY which means
+		that the -r command needs to be included between the 'rm' command and the argument directory
+		if the directory is not empty, otherwise it will not remove the files or folders located WITHIN
+		the directory and the command will fail.  rmdir can also be used in its place.  
+  -help: this command will bring up the help menu with all the valid commands in this shell.  if 
+		provided an argument command, this command will bring up the instructions and information for
+		the provided command argument 
+  -find: searches specified directory for the provided argument.  Takes three arguments, the first
+		being the directory to be searched, the second is the parameter that is going to be evaluated
+		(in this case, name) with a dash, then the file name we are looking to find 
+  -grep: searches a specified file for a specified string, takes two arguments: a string to 
+		search for and a filename to search in.  You can also specify to search RECURSIVELY within a 
+		directory by including the -r flag in the command invocation before the arguments
+
+Git: 
+  -What is version control and why do developers use it?
+		Version control is a way for multiple people to work on the same document(s) effectively and 
+		efficiently by tracking the entire history of revisions to said document(s) and providing a 
+		process for merging them together.  Developers use it so that they can work on different
+		parts of a code base simultaneously and be able to integrate all the changes and at the end 
+		have one or more working files.  
+	
+	-What is a commit? What are the best practices for commit messages?
+		A commit is a save point in your version control and can include one or more files that have
+		had changes made to them or files that have been added and these are specified by the user.  
+		Each commit has a unique ID, a MESSAGE of what has been done in this commit, an author so you know 
+		who has made the changes within this commit, and a timestamp so we know WHEN this commit was made. 
+		It is best practice to make your commit messages specific so we know exactly what was changed or 
+		updated in the commit so when users are looking at the commit logs, they can easily find certain 
+		commits when trying to revert to a previous version of the document(s)
+		
+	-What is a branch?
+		A branch is a copy of a git repository.  There is always a master branch, which is the original
+		version, and then you can create sub-branches where other copies of the repository live that users 
+		can then make edits to one or more of the files that can then be merged back into the master 
+		branch at some point in the future.
+		
+	-What are the 3 stages of a git change and how do you move a file from one stage to the other?
+		Step 1 of a git change is to actually make that change in the file.  We will typically do this 
+		directly to the file in the text editor program on our computer and then save it.  We can then see
+		which files in the repository have changes made by using 'git status' and 'git diff'
+		Step 2 includes the user ADDING or STAGING these changes for a commit by running 'git add ' command 
+		and providing it the specified file or folder to add as an argument (or add all the files that have 
+		had changes	made to them by providing '.' as an argument.  
+		Step 3 is to COMMIT the changes made by running the 'git commit' command and providing it the -m tag 
+		and a commit message, which is required for each commit. 
+GitHub:
+	-Write an explanation of and compare Git and GitHub to one another.
+		Git is version control software that we can use in order to keep track of changes made to a project
+		or a set of files.  It is free open source software created by Linus Torvald, creator of Linux.  
+		GitHUB is a website that leverages this software in order to provide a place where you can store a 
+		copy of	your git repositories to share with others in public and private format online.  It is however
+		not the only remote hosting service we can use, there are others like Bitbucket and GitLab.  GitHub
+		however does provide some features in addition to just being a host for files.  These features make
+		it easier to collaborate with others on code bases, and include things like forking and pull requests,
+		as well as wikis for your projects and bug tracking.  
+		
+	-In your own words, write instructions to create, clone and update a repository.
+		Creating a git repository is very simple and is done from the command line.  We simply 'cd' into the
+		directory we want to initialize version control in and we then run the 'git init' command.  This 
+		initializes the current directory as a git repository.  If we provide this command a directory name
+		as an argument, it will initialize an empty git repository with the directory name provided within 
+		the current directory.  If we are initializing a centralized repository	we usually want to use the 
+		--bare flag in our 'git init' command because it will omit the working directory and make it impossible
+		to edit files and commit changes in that repository. The idea is that we will then clone this repository
+		to our own local machines and then make changes that we can then push to the central repository.  We 
+		can also create a git repository online on GitHub simply by clicking on 'New Repository' in the homepage
+		while signed in.  If we initialize a git repository on our local machine, we have to set the origin 
+		upstream settings so the repository knows where to push updates.  
+		
+		We clone a copy of this repository to our local machine by navigating in our command line to the directory 
+		where we would like to place this repository (on the command line) and then using the 'git clone <URL>'
+		command, where we provide the specified URL to the repository online.  It will then copy the repository
+		on to our local machine.  
+		
+		After we have cloned the repository, we can follow the three stages of a git change in order to update
+		this repository by EDITING and saving our changes directly to the repository files, STAGING (or adding)
+		our edited/updated files for a commit, and then COMMITTING them with a commit message.  We then PUSH these
+		changes to the branch that we are working in using 'git push origin <branch>'.  If we are working in a
+		sub-branch (ie not the master branch) then we can make a pull request to have our separate sub-branch
+		changes merged with the master branch. 
+		
+	-In your own words, write instructions to fork, clone and update a repository.
+		Forking a repository can be done online on the GitHub website.  After you have found a repository that
+		you wish to work on you can fork it, which is a matter of clicking on the 'Fork' button at the top of
+		the repo and this will create a copy of the repo (a separate branch) for you that is located under your username but with 
+		the same repo name.  This will allow you to make changes to someone else's code base without affecting
+		the original repo.  
+		
+		To clone this forked project, we can then use our 'git clone <URL>' command on the command line in the
+		directory we wish to place the repo copy and it will make a copy on our local machine for us.  Cloning a  
+		project will always have a reference to the upstream origin so it knows where to push changes to.
+		
+		We can then work in this copy and edit the files, save them, stage them for commit, and then commit them
+		so we can push these changes back up to the origin repository online.  Once we have pushed the commit 
+		to our forked repository online, we can create a pull request in order to have these changes merged into
+		the original repository if the project owner wishes.  
+		
+	-What is a pull request and how do you create and merge one?
+		A pull request is simply a request from a forked repo(branch) to the master repo to incorporate changes made to
+		the forked repo into the master repo.  It indicates the developer is ready to have their changes merged 
+		into the master branch.  A pull request creates a dedicated forum to these changes where other developers
+		can post feedback and even propose changes to the pull request by pushing follow-up commits.  The project
+		maintainter can then review the proposed changes after they have been reviewed and edited by the whole
+		team and merge them into the master branch and close the pull request.
+	
+	-Why are pull requests preferred when working with teams?
+		Pull requests are preferred for teams because it allows developers to review their teammates proposed changes
+		to the codebase and provide feedback and even follow-up commits within a forum dedicated to the pull 
+		request.  Pull requests also allow one person to be the project maintainter and allow them to review 
+		all changes made to the codebase before	merging them into the master branch.  

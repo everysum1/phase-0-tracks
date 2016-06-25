@@ -1,0 +1,32 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:
+client
+server
+render
+
+A browser is 
+
+What is HTML? In your answer, include definitions of the following:
+tag
+element
+node
+attribute
+block element
+inline element
+
+HTML is an acronym that stands for Hyper Text Markup Language.  
+
+Very briefly, explain the purpose of the following elements:
+head - 
+body - contains the content that will actually be rendered in the browser
+p - paragraph
+form - consists of an input field 
+div - short for a division, it is simply a 
+span - 
+select - 
+h2 - this is a type of header with a 2nd degree importance 
+ol - ordered list
+ul - unordered list
+table - 
+tr - table row, 
+td - table data, 
+Rubric - 
