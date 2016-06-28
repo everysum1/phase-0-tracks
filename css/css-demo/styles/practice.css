@@ -1,0 +1,24 @@
+#contact-info {
+  font-size: .8em;
+}
+
+.job {
+  background-color: #e9e5dc;
+}
+
+.lists {
+  font-size: .8em;
+}
+
+span:hover {
+  color: red;
+}
+
+ul li {
+  color: darkgrey;
+}
+
+ul li:first-child{
+  color: green;
+}
+
