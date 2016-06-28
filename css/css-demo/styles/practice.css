@@ -4,6 +4,9 @@
 
 .job {
   background-color: #e9e5dc;
+  border: 3px dashed violet;
+  margin: 10px;
+  padding: 5px 17px;
 }
 
 .lists {
