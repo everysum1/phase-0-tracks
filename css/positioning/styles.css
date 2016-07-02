@@ -5,21 +5,20 @@ body {
 #octopus {
   z-index: 1;
   position: absolute;
-  margin: 100px auto;
-  top: 200px; 
-  left: 400px;
+  margin: 100px 150px;
+
 }
 
 #hat {
   z-index: 2;
   position: relative;
-  top: 220px;
-  left: 370px;
+  top: 30px;
+  left: 550px;
 }
 
 #glasses {
   z-index: 2;
   position: relative;
-  top: 282px;
-  left: 155px;
+  top: 90px;
+  left: 325px;
 }
