@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trips To Take</title>
+  <style>
+    #main {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trippin' Round</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="packing-list.html">Packing List</a></li>
+    </ul>
+  </nav>
+
+  <section id="main">
+    <h2>Trips I Want To Take</h2>
+    <table border="1">
+      <thead>  
+        <tr> 
+          <th>Event</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>La Tomatina</td>
+          <td>Bunol</td>
+          <td>Spain</td>
+        </tr>
+        <tr>
+          <td>Carnivale</td>
+          <td rowspan="2">Rio De Janeiro</td>
+          <td>Brazil</td>
+        </tr>
+        <tr>
+          <td>Jiu Jitsu Training</td>
+          
+          <td>&nbsp</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <form>
+    <fieldset style="width: 884px">
+      <legend>Suggestion Box</legend> 
+      <div>
+        <label>Name:</label>
+        <input style="padding-left: 15px" type="text" name="name">
+        <label>Email:</label>
+        <input style="padding-left: 15px" type="email" name="email">
+        <input type="checkbox" name="iWent">
+        <label>Currently traveling</label>
+        <label style="padding-left: 15px">Ideal Travel Date:</label>
+        <input type="date" name="date">
+      </div>      
+      <div>
+        
+      </div>
+      <textarea style="margin-top: 10px; vertical-align: top" rows="5" cols="100px" name="suggestion">Where would you go if you could go anywhere?</textarea>
+      <button type="submit" style="height: 80px; margin-top: 10px" onclick="alert('Your suggestion has been submitted.  Thank you!')">Submit</button>
+    </fieldset>
+
+  </form>
+
+  <footer style="text-align: center">
+    <p>Trippin' Round, LLC (C) All Rights Reserved
+  </footer>
+</body>
+</html>
