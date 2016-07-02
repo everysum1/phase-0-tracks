@@ -1,0 +1,25 @@
+body {
+  background-color: blue;
+}
+
+#octopus {
+  z-index: 1;
+  position: absolute;
+  margin: 100px auto;
+  top: 200px; 
+  left: 400px;
+}
+
+#hat {
+  z-index: 2;
+  position: relative;
+  top: 220px;
+  left: 370px;
+}
+
+#glasses {
+  z-index: 2;
+  position: relative;
+  top: 282px;
+  left: 155px;
+}
