@@ -1,0 +1,39 @@
+**Name at least three categories of CSS adjustments (example: colors)?
+
+font
+spacing (margin, padding)
+positioning (relative, absolute, fixed)
+size of elements (text size, width, height)
+color(text)
+background color
+
+**What are the three ways to link a CSS rule to an HTML document? Which one is the best and why?
+
+You can link a CSS rule to an HTML element through: 
+1. inline styling
+2. style tag in head of document
+3. separate CSS file linked in head of HTML document
+
+A separate CSS file is usually considered best practice because all your styling is kept separate from your html and edits on repeated elements can more easily be reflected throughout the site without having to update each individual html page, essentially avoiding having to repeat your code.  
+
+**What is a selector? Give examples of at least three types of selectors.
+
+a selector is the part of a CSS rule that allows you to select one or more html element(s) to style.  This can be accomplished by three different types of selectors:
+1. element selector: selects the element by name (i.e. h1, p, a) will select all tags with the element
+2. class selector: selects all elements with the class attached to it (i.e. .myclass)
+3. id selector: selects the element with the id attached to it (note: there is only one element tagged with a given id attribute value per page)
+
+
+**What is the box model?
+
+The box model is the way that the browser understands and renders elements of an html page on the screen.  Every element on the page is represented using a box and its properties determine the content of the space taken up by an element.  Each box has four edges: margin, border, padding and content.  The content is the area that contains the actual content for the element, whether that's an image or some text.  The padding is the area that directly surrounds the content up until the border edge.  The border surrounds the padding and can have a color and pattern that will border the element.  The margin is the area directly outside of the border's outer edge that provides the space between its own element's border and another element's margin or border.  
+
+**Explain and give an example of the cascading effect of CSS.
+
+CSS sheets are cascading in nature because there is always more than one of them that can be applied to an element in the browser.  For example, your browser comes with default CSS stylings, which are overridden by any CSS files that are linked to html files being rendered on the browser.  If there is more than one CSS file, one of them has to override all the others with regard to each specific element because styles can conflict and there can only be one style applied to each element.  There has to be one way to figure out which stylesheet rule applies to each element, and that process is a cascading one where the rule applied cascades down to the most specific one.  Specificity is determined by not only the element being selected in the CSS rule but also its inheriting styles from parent elements that it is nested inside of and also which rule is most specific in terms of selector expression.  As a general rule, class selectors are 10x more specific than element selectors and id selectors are 10x more specific than class selectors.  When in the case of multiple stylesheets linked to the html page, the last one loaded is the one's whose styles get applied last and therefore are the ones that show up on the page when it is rendered. 
+
+**Name two CSS techniques that assist in responsive design.
+
+Fluid widths: allow elements to be resized depending on the viewport width of the machine and still keep the layout intact relative to the page by assigning percentage widths relative to the page instead of fixed ones.  
+
+media queries: allow different stylings to be applied to elements on the page when certain media elements change, such as width or height.  They consist of a type of media and an expression that limits the scope of the style sheet by using the media feature as a delineation.  It allows styling content to be able to target a certain range of display devices (i.e. mobile, tablet) without changing the whole page.  
