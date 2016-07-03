@@ -46,3 +46,29 @@ figcaption {
 body {
   max-width: 960px;
 } 
+
+
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  main h1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  #external-links {
+    display: none;
+  }
+  section li {
+    display: inline;
+    padding: 5px;
+  }
+  main {
+    width: 100%;
+    float: left;
+  }
+}
