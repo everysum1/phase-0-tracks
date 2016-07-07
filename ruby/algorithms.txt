@@ -1,0 +1,39 @@
+# Using an Elevator
+# 
+# Press button in lobby to call elevator
+# Until light above one elevator lights up
+    #Check every elevator from first to last
+# Move in front of elevator that lights up
+# Wait for doors to open
+# If center of platform is empty
+    # Move inside elevator at center of platform
+# Else 
+    # Move inside elevator to position left of center of platform
+# Turn around 360 degrees in position
+# Check if button panel is to right of door opening
+# Else check if button panel is to left of door opening
+    # if it is, 
+        # move towards it until right in front of it
+        # scan all buttons starting from bottom left, across and from bottom to top until you find your floor number
+        # if it is not already lit up
+            # press it
+# Check floor indicator panel directly above door
+    # If it reaches your floor
+        # exit elevator
+
+
+# Riding a Bicycle
+#
+# Start off facing the right or left side of the bicycle
+# Grab respective side's handlebar with same side hand
+# Step same side foot three inches perpendicularly in front of same side's pedal
+# Step opposite side's leg over bike and place on other side of bike, parallel to first foot as you pivot first foot 90 degrees clockwise
+# Grab opposite side's handlebar with opposite hand
+# If opposite side's pedal is in a position somewhere including or after 7 through before 11 clockwise   
+    # Take opposite foot and step on top of that side's pedal
+    # Else take first foot and step on top of that side's pedal
+# Press down on pedal with that foot until you reach the lowest part of pedal's arc
+# Place behind on the seat behind you
+# Press opposite pedal down until you reach the lowest part of of that pedal's arc
+# Locate destination and map out route
+# Steer handlebars to follow route
