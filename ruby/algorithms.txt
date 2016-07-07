@@ -33,7 +33,7 @@
     # Take opposite foot and step on top of that side's pedal
     # Else take first foot and step on top of that side's pedal
 # Press down on pedal with that foot until you reach the lowest part of pedal's arc
-# Place behind on seat behind you
+# Place behind on the seat behind you
 # Press opposite pedal down until you reach the lowest part of of that pedal's arc
 # Locate destination and map out route
 # Steer handlebars to follow route
