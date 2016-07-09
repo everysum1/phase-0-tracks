@@ -1,0 +1,76 @@
+body {
+  background-color: #379528;
+  font-family: 'Shadows Into Light', cursive, serif;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-shadow: -1px 1px 0px #000,
+              1px 1px 0px #000,
+              -1px 1px 0px #000,
+              1px 1px 0px #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: inline-block;
+  max-width: 20%;
+  vertical-align: top;
+}
+
+main {
+  max-width: 79%;
+  display: inline-block;
+}
+
+h1, h2 {
+  letter-spacing: 0.5em;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'Covered By Your Grace', cursive;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  font-family: 'Covered By Your Grace', cursive;
+  text-align: center;
+
+}
+
+h1:hover, h2:hover {
+  color: red; 
+}
+
+p {
+  font-size: 2em;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.zebra {
+  border: 2px solid black;
+  padding: 7.5%;
+  margin: 5%;
+  background-color: #CE545D;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  text-decoration: underline;
+}
+
+tr:nth-child(even) {
+    background-color: grey;
+}
