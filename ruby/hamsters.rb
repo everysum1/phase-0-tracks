@@ -18,4 +18,9 @@ if age == ""
 end
 
 
-
+puts "Hamster Survey:"
+puts "Name: #{name}"
+puts "Volume: #{volume}"
+puts "Fur color: #{fur}"
+puts "Adoption: #{adoption}"
+puts "Age: #{age}"
