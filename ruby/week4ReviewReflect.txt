@@ -1,0 +1,53 @@
+1. A **variable** is a placeholder for a value of some kind  Typically
+variables are used because we want to manipulate that value in 
+some way  A variable can hold a number, a string or any other 
+data type that the computer recognizes such as a hash or an
+array.  
+
+2. Ruby will run the line 
+***
+    full_name = first_name + last_name 
+***
+ 
+first from left to right, it encounters a name 'full_name' which 
+we are then following with an '=' sign, telling the computer
+we are assigning a value to this name or variable.  It then puts 
+that aside and reads what is to the right of the '='. It reads the
+variable 'first_name', which it looks up and sees is equal to a 
+string.  It then comes across the '+' operator, so it now expects 
+it's going to add this string to another string.  It then reads 
+'last_name', which it recognizes as another variable that represents
+another string.  There are no other operators after this last variable
+so it evaluates the expression, concatenating these two strings into 
+one string, and then assigning 'full_name' to  hold the value of our
+concatenated string.
+
+3.  **Data types**
+    *string* - a collection of alphanumerical characters in words or phrases, surrounded by single or double quotes
+    *integer* - a whole number, also referred to as a fixnum
+    *float* - a number with decimal places (default is two)
+    *nil* - a placeholder for no value
+    boolean - a type of value that represents either 'true' or 'false'
+
+4. An algorithm is a series of detailed steps for solving a problem.  
+5. A few types of algorithms are **searching** algorithms that look for a certain value within a collection of values, and a **sorting** algorithm that puts a collection of values in a certain order according to the details of the algorithm. 
+
+6. A method is a piece of code that does something (a bit of work) and returns a value.  All values return 'nil' by default unless explicitly indicated otherwise.  
+7. **METHODS**
+    *return value* - value that is returned at the end of a method call.  If none is explicitly returned in the body of the method, it will return 'nil'.  A method will implicitly return the last evaluated line in a method body.  A method stops running after it runs an explicit return statement, so anything after it in the body of method will not be run.  
+    *side effect* - any work that a method does that affects objects outside of those declared in the method, for example updating the value of a variable on the global scope
+    *parameter* - a placeholder variable declared in a method definition which is needed to invoke the method at call time 
+    *argument* - a value passed into a method at call time in order to do some work with
+    *implicit return* - a return that is assumed and doesn't need to be overtly indicated.  Every method in ruby 'implicitly returns' the last evaluated line in its body without having to use the 'return' keyword
+
+8. Scope defines where a variable is accessible within a program.  Global scope is a namespace where the variables declared herein are accessible anywhere in the program.  Method scope is a namespace where the variables declared herein are only available within the method at call time and cannot be accessed from outside of the method.  
+
+9. Control flow is a way to direct a program to execute certain blocks of code depending on whether one or more conditions are met.  Programmers use this because they might not know the value or details of a certain variable (usually assigned from user input) and so builds their program in a way that it can handle multiple cases or conditions being present with different actions.  
+10. **CONTROL FLOW**
+    *loop* - a code construct that repeats the body of code inside of it a specified amount of times or until a certain condition is met
+    *if* - conditional statement, checks if the expression that follows it evaluates to true or false, and executes the block of code in its body if it is
+    *else* - conditional statement that runs its body of code if none of the the other conditions are true, always preceded by at least one if and zero or more elsif statements
+    *elsif* - secondary conditional after an 'if' block that checks if the expression that follows it evaluates to true or false, and runs its block of code if it is true
+    *while* - conditional statement that will execute the block of code inside its body while the expression that directly follows it is true and breaks out of its loop once it becomes false
+    *until* - conditional statement that will execute the block of code inside its body while the expression that directly follows it is FALSE, and breaks out of its loop once it becomes true
+
