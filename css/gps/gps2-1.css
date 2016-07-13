@@ -1,3 +1,36 @@
-body {
-  background-color: blue;
+header{
+  background-color: black;
+  background-image: url(http://www.freeiconspng.com/uploads/github-logo-icon-0.png);
+  background-size: 3em 3em;
+  backround-repeat: repeat;
+  color: white;
+  text-shadow: 5em 5em 5em black;
+}
+body{
+  width: 98%;
+  background-color: black;
+}
+.column-1{
+  width: 46%;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  vertical-align: text-top;
+  padding:1%;
+  border: 1%;
+ }
+ 
+.column-2{
+  width: 46%;
+  color: white;
+  background-color: black;
+  display: inline-block;
+  vertical-align: text-top;
+  padding:1%;
+  border: 1%;
+}
+
+footer{
+  margin-top:20px;
+    background-color: darkgrey;
 }
