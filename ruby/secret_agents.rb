@@ -15,7 +15,7 @@ def encrypt(str)
     if str[idx] != " "
       # better solution -> str[idx] = alpha[(alpha.index(str[idx]).next) % 26]
       # 
-      ##### conditional solution for edge cases #####
+      ##### conditional solution for edge case #####
       if str[idx] == "z" 
         str[idx] = "a"
       else
@@ -55,20 +55,20 @@ def decrypt(str)
 end
 
 
-puts( 'encrypt("abc") == "bcd": ' + ( (encrypt"abc") == "bcd").to_s )
+# puts( 'encrypt("abc") == "bcd": ' + ( (encrypt"abc") == "bcd").to_s )
 
-puts( 'encrypt("zed") == "afe": ' + ( (encrypt"zed") == "afe").to_s )
+# puts( 'encrypt("zed") == "afe": ' + ( (encrypt"zed") == "afe").to_s )
 
-puts( 'decrypt("bcd") == "abc": ' + ( (decrypt"bcd") == "abc").to_s )
+# puts( 'decrypt("bcd") == "abc": ' + ( (decrypt"bcd") == "abc").to_s )
 
-puts( 'decrypt("afe") == "zed": ' + ( (decrypt"afe") == "zed").to_s )
+# puts( 'decrypt("afe") == "zed": ' + ( (decrypt"afe") == "zed").to_s )
 
-# nested method call: works because ruby allows you to chain methods together, 
-# reading from innermost method call out and using the return value of the last 
+# nested method call: works because ruby interprets code from the innermost 
+# function call out, and uses the return value of the last 
 # method call as the argument for the next. built in or extended class methods
-# can also be chained with the dot operator
+# can also be chained with the dot operator using the same principle
 
-puts decrypt(encrypt("swordfish"))
+# puts decrypt(encrypt("swordfish"))
 
 # user interface: 
 
