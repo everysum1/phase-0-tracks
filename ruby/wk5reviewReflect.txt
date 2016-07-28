@@ -1,0 +1,110 @@
+Data Structures
+1. Why are data structures useful in programming?
+
+Data structures are great ways to store data depending on our particular needs.
+Arrays are data structures that store information in a numbered index that starts
+at zero.  We typically use arrays in our programming when the order of the elements
+that we are storing in the array matters and are usually storing elements of the 
+same data type. They are easy to traverse in order and also easy to add and remove 
+elements from the front or back of an array. Arrays can also hold other nested data 
+structures like hashes or even other arrays.  
+
+We also use hashes in our code and they are useful for when you have value pairs to store.
+A hash takes both a key and a value, and associates them together. Key value pairs stored
+in a hash can, and frequently are, of different data types.  Hashes can hold nested 
+data structures (arrays or other hashes) as its property values.  
+
+Arrays
+2. Define "array" and describe the characteristics of an array.
+
+An array is a data structure that is denoted through the square '[ ]' brackets.  
+Between its brackets it can hold an ordered list or collection of data, usually 
+but not always of the same data type.  We typically use arrays because the order
+of the elements contained in the array matters.  They are organized by index number, 
+and start counting with the number '0'.  Elements in the array are accessed with 
+bracket notation, referencing the array and its respective index number to access
+the element (like so: myArray[2] to access the third element). 
+
+3. Give two original examples of data sets that an array might be well-suited for.
+  
+An array can be used for collections of data where order matters and are implemented
+in heap, stack or queue data structures because they help preserve the order of 
+the elements in some way.  Your browser history (on a tab basis) for example, is
+probably kept in an array because as soon as you hit back, you can access the 
+last page you just visited.  This would be a good situation to implement a stack
+or heap so you can easily pop off the last page visited and serve it in the browser.  
+
+Another example of a data set that an array is suited for is a list of posts in 
+your facebook profile.  The 'post' itself may be a hash with a title and a body of
+text as well as a date it was posted on, but the list of posts can be neatly kept
+in chronological order so they are easy to be served up on your friends' feeds or
+your profile.  
+
+
+Hashes
+4. Define "hash" and describe the characteristics of a hash.
+
+A hash is a data structure that is typically denoted by two curly braces '{ }' 
+and holds key-value pairs of data. A hash can be iterated over its keys and its 
+values accessed by indicating the hash and its specific key in bracket notation, 
+like so: myHash["myKey"] = myValue. The key-value pairs sometimes differ in data
+type and values can contain one or more nested data structures, including arrays
+or even other hashes.  
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+
+A hash can be very useful when you have two pieces of data that you have to show
+an association between.  One such pair are label-values.  Your profile on facebook,
+for example, have your information stored in hashes that have labels as your keys
+and your specific information as the values to their corresponding label keys.  
+That way they can keep track of your information more easily to display it on 
+your profile. 
+
+Another example of a hash implementation might be an order on a website like 
+amazon.  When you place an order, details like your shipping address and 
+the quantity of the items ordered, the color, and the size are all stored in a 
+hash and sent to the order center at amazon, and maybe also get sent to fulfillment 
+down at the warehouse so they can start shipping too.  It is convenient to store 
+and send data this way because everything in your order is in a neat little data
+bundle grouped separately from any other order and will be easier for organizational
+purposes.
+
+Iteration
+6. Why is iteration useful?
+
+A lot of times we're going to find ourselves needing to do something to each element
+in a given set of data, and so it is useful to have a method of doing that.  Say 
+for example, you're searching for tweets on your favorite singer or celebrity.  
+In this example, the computer has to check each and every post or tweet on the web
+site to see if its text includes your singer's name.  It would be great to have a way 
+to go through each one easily and check.  This is what iteration allows us to do.
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+
+A common one that I find myself doing a lot, (or at least I used to when I had CDs!)
+was look through my music collection in order to find something that I wanted to 
+play or through my bookshelf (remember books?!) for a book to read next.  Any time
+that you're looking through a collection of stuff, you're iterating over the items
+of that collection.  Even counting up inventory at work.  It's all around us and 
+we do it all the time! 
+
+Blocks
+8. What is a block?
+
+A block is a piece of code that does some programming work and can either cause
+a side effect, return a value or both.  It can be passed around like an object 
+and can be a given to a method call as a corresponding argument.  It can also be
+ passed arguments, which it can use to do the programming work indicated in its 
+ body.  The typical syntax for a block of code is denoted with curly brackets '{ }'
+ for a single line block and wrapped by 'do' and 'end' when taking up more than 
+ one line. Within its brackets or 'do end', it can denote parameters in between 
+ pipes '|  |' if desired to be used in its body.
+
+
+9. What is a block parameter, and where does its value come from?
+
+A block parameter is a local variable declared within the body of a block and
+serves as a placeholder for a value that can later be passed in when the containing 
+block is called. Its value will come from arguments that are later passed to the 
+block during method call, and whose value will typically be used while doing some
+work in the body of the block. 
