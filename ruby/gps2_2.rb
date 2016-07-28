@@ -83,4 +83,40 @@ display(list)
 
 
 
-# RELEASE 6
+# RELEASE 5
+
+# # What did you learn about pseudocode from working on this challenge?
+
+# I learned that it makes things much easier than trying to put your ideas into code 
+# directly and helps a lot with planning things out so if you have an error somewhere
+# you can catch it much more easily because you know what each part of your code 
+# is trying to do precisely. 
+
+# # What are the tradeoffs of using arrays and hashes for this challenge?
+
+# Arrays are easier to populate because you have just one value to assign, rather than 
+# a key or a value so they are easier to iterate over and to push values into.  They 
+# aren't always the right tool for the job though, and in this case we needed a hash 
+# because we had two values in each case that had a relationship with each other and
+# that was important to express and keep track of throughout the whole process.  
+
+# # What does a method return?
+
+# A method returns the last evaluated line implicitly
+
+# # What kind of things can you pass into methods as arguments?
+
+# You can pass any data structure into a method as an argument.  We passed strings,
+# integers, and hashes into our methods for this exercise.
+
+# # How can you pass information between methods?
+
+# One way to pass info between methods is saving the output of one to a variable and 
+# passing that variable into another method as an argument.  
+
+# # What concepts were solidified in this challenge, and what concepts are still confusing?
+
+# I was able to learn about passing data structures and information between methods 
+# while outside of a class.  My first instinct was to use a class, but its good
+# to know how to do without one if necessary.  Nothing was confusing or out of left
+# field for me.
