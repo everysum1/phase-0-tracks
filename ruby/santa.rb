@@ -1,4 +1,6 @@
 class Santa 
+  attr_reader :ethnicity
+  attr_accessor :gender, :reindeer_ranking, :age
 
   def initialize(gender, ethnicity)
     p "Initializing Santa instance..."
@@ -7,26 +9,6 @@ class Santa
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", 
                         "Comet", "Cupid", "Donner", "Blitzen"]
     @age = 0
-  end
-
-  def gender 
-    @gender
-  end 
-
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-
-  def ethnicity
-    @ethnicity
-  end 
-
-  def age 
-    @age 
-  end
-
-  def reindeer_ranking
-    @reindeer_ranking
   end
 
   def speak 
@@ -77,3 +59,14 @@ p sandy.age
 p sandy.gender
 sandy.gender = "male"
 p sandy.gender
+
+10000.times do |x| 
+  gender = gender_list[rand(gender_list.length)]
+  ethnicity = ethnicity_list[rand(ethnicity_list.length)]
+  santa = Santa.new(gender, ethnicity)
+  santa.age = rand(140)
+  p "Gender: #{santa.gender}"
+  p "Ethnicity: #{santa.ethnicity}"
+  p "Age: #{santa.age}"
+  p "Reindeer ranking: #{santa.reindeer_ranking.shuffle}"
+end 
