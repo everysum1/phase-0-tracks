@@ -13,7 +13,8 @@ module Shout
   end
 
   def price_yeller(price)
-    puts "Hey now, get it right here, folks...only #{price.to_i} dollars. That's right!"
+    @dollar = price.to_i < 2 ? " dollar" : " dollars"
+    puts "Hey now, get it right here, folks...only #{price.to_i}#{@dollar}!!! That's right, get it here now..."
   end
 end
 
@@ -29,6 +30,7 @@ end
 
 ralphie = FruitStandGuy.new
 ralphie.sales_pitch("Grapes")
-bryan = Promoter.new
-bryan.sales_pitch("comedy!")
-bryan.price_yeller("8")
+ralphie.price_yeller(1)
+lucky_louie = Promoter.new
+lucky_louie.sales_pitch("comedy!")
+lucky_louie.price_yeller("8")
