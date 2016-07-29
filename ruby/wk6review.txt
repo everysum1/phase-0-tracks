@@ -1,0 +1,25 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+class
+state
+behavior
+instance variable
+instance method
+
+# Classes are blueprints from which individual objects are created in an object-oriented language like ruby.  We can instantiate objects, that is create an object copy of a particular class, in the pseudoclassical style that exists in most other programming languages by calling the 'new' method on the class like so: 'myClass.new' and if it takes any arguments for setting initial values, we can pass them to the call to 'new' at this time.  
+
+# Classes set out the state and behavior of the objects that they create.  State is usually represented by attributes, which are specific properties of an object held in an instance variable and represent the object's current attribute value.  Behavior is determined by what actions the object can take, encapsulated in instance methods within its body that can sometimes mutate the values of its state, held in its instance variables.  
+
+
+2. What are attributes?
+
+#Attributes are specific properties of an object and are held in instance variables.  They are private by default so you don't have access to them outside of the scope of the instance itself.  We can access them outside of the instance through an attribute accessor method that is declared at the beginning of the class 
+
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+
+4. What is the purpose of the initialize method? When does it run?
+
+5. What are modules?
+
+6. What are the different ways you can use a module?
