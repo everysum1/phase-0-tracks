@@ -13,13 +13,23 @@ instance method
 
 2. What are attributes?
 
-#Attributes are specific properties of an object and are held in instance variables.  They are private by default so you don't have access to them outside of the scope of the instance itself.  We can access them outside of the instance through an attribute accessor method that is declared at the beginning of the class 
+#Attributes are specific properties of an object and are held in instance variables.  They are private by default so you don't have access to them outside of the scope of the instance itself.  We can access them outside of the instance through an attribute accessor method that is declared at the beginning of the class and allows for the viewing and setting of instance variables that are specified in its 'attr_accessor' declaration.  We can also restrict access to instance variables from outside the class to only view through the 'attr_reader' method or to only writing through the 'attr_writer' method. 
 
 
 3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
 
+# A real world object that we might want to model as an object and write a class for could be a cash register or checkout counter.  Its state consists of the cash it currently holds in its drawer that can be represented as an attribute of the cash register object.  I would also include methods to be able to add items together to reach a subtotal, adding tax to reach a total sum for a transaction, take items off in case a customer changes their mind, and one to make change as well. 
+
 4. What is the purpose of the initialize method? When does it run?
+
+# The purpose of the initialize method is to set the starting values of attributes of the object instance at the time of instantiation and it can take zero or more arguments.  It runs every time that an object is instantiated, when we call 'new' on our class with the appropriate number of arguments.  
 
 5. What are modules?
 
+# Modules are collections of methods and constants that are similar to classes but for which we don't need more than one copy or instance of.  They are a succinct way of organizing values and methods that are logically grouped together so they can be accessed easily.  A calculator, for instance, could be a module.  It would have methods like add an subtract that we can use elsewhere in our code, even in classes and their respective methods.   
+
 6. What are the different ways you can use a module?
+
+# Modules can be included (or mixed) into classes without being instantiated, just by using the 'include' keyword followed by the module name (always capitalized) at the top of the class. The Ruby language also has a variety of modules included as part of its library and can be included in the present development environment by calling 'require' followed by the module name, such as we saw with SecureRandom.  This module, SecureRandom, has methods inside of it for generating a random secure string of varying length of letters and numbers, and is commonly used for generating session keys in HTTP cookies and password reset keys.  We call its methods similar to a class, by calling the method on the module for example:'SecureRandom.hex(10)'. 
+
+# Modules can also provide us with constants, such as the Math module, which has the constant 'PI' that we can call simply by calling 'Math.PI'
