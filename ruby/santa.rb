@@ -9,6 +9,10 @@ class Santa
     @age = 0
   end
 
+  def gender 
+    @gender
+  end 
+
   def gender=(new_gender)
     @gender = new_gender
   end
@@ -62,10 +66,14 @@ end
 sandy = Santa.new("female", "Orc")
 #sandy.name
 
-puts sandy.reindeer_ranking.inspect
+p sandy.reindeer_ranking.inspect
 sandy.get_mad_at("Dancer")
-puts sandy.reindeer_ranking.inspect
+p sandy.reindeer_ranking.inspect
 
 p sandy.age
 sandy.celebrate_birthday
 p sandy.age
+
+p sandy.gender
+sandy.gender = "male"
+p sandy.gender
