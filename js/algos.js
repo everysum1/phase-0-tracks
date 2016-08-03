@@ -68,11 +68,11 @@ function randomWords(len) {
   // until the length of the array is equal to the integer
   for (var i = 0; i < len; i++) {
     // pick a random word length from 1 to 10
-    var randomWordLength = Math.floor(Math.random() * 10);
+    var randomWordLength = (Math.random() * 10);
     // declare an empty string
     var randomWord = "";
     // for the number of times of that length
-    for (var i = 0; i < randomWordLength; i++) {
+    for (var j = 0; j < randomWordLength; j++) {
       alpha = "abcdefghijklmnopqrstuvwxyz";
       // pick a random word from the alphabet
       var randomLetter = alpha[Math.floor(Math.random() * alpha.length)];
@@ -87,6 +87,8 @@ return words;
 }
 
 console.log(randomWords(6));
+console.log(randomWords(3));
+console.log(randomWords(10));
 
 
 
