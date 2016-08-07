@@ -29,20 +29,10 @@ class VirusPredictor
 
     #predicts deaths using population density
     def predicted_deaths
-      # declare a death factor var and set it equal to 0.05
-      death_factor = 0.05
-      number_of_deaths = 0
       # create an hash with benchmarks and their death factors(200, 150, 100, 50)
-      death_on_pop = { 200 => 0.4, 150 => 0.3, 100 => 0.2, 50 => 0.1 }
+      death_on_pop = { 200 => 0.4, 150 => 0.3, 100 => 0.2, 50 => 0.1, 0 => 0.05 }
       # loop over the hash's SORTED REVERSED keys
-      death_on_pop.keys.sort.reverse.each do |pop_density| 
-        # if the key(pop density) is greater than state's pop density, NEXT
-        next if @population_density < pop_density 
-        # multiply it by population arg, call floor on it
-        # store this in a variable somewhere 
-        death_factor = death_on_pop[pop_density] 
-        break
-      end
+      death_factor = determine_factor(death_on_pop)
       number_of_deaths = (@population * death_factor).floor
       # print out variable in a string
       print "#{@state} will lose #{number_of_deaths} people in this outbreak"
@@ -50,22 +40,20 @@ class VirusPredictor
 
     # #predicts speed of spread using population density
     def speed_of_spread
-      # declare a speed variable set equal to default value (2.5)
-      speed = 2.5
       # create hash with benchmarks 
-      speed_factor = { 200 => 0.5, 150 => 1, 100 => 1.5, 50 => 2 }
+      speed_factor = { 200 => 0.5, 150 => 1, 100 => 1.5, 50 => 2, 0 => 2.5 }
       # iterate over the hash's keys in descending order
-      speed_factor.keys.sort.reverse.each do |pop_density|
-        # when we find the key that is immediately under population density
-        next if @population_density < pop_density
-        # set speed equal to the key's value in the hash
-        speed = speed_factor[pop_density]
-        break
-      end
+      speed = determine_factor(speed_factor)
       #print out statement with speed variable
       puts " and will spread across the state in #{speed} months. \n\n"
     end
 
+    def determine_factor(benchmark_hash)
+      benchmark_hash.keys.sort.reverse.each do |pop_density|
+        next if @population_density < pop_density
+        return benchmark_hash[pop_density]
+      end
+    end
 end
 
 #=======================================================================
