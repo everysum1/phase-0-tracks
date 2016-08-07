@@ -21,14 +21,14 @@ class VirusPredictor
 
   #calls methods that predicts deaths and speed of spread for particular state and population (virus predictor object)
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
     #predicts deaths using population density
-    def predicted_deaths(population_density, population, state)
+    def predicted_deaths
       # declare a death factor var and set it equal to 0.05
       death_factor = 0.05
       number_of_deaths = 0
@@ -49,16 +49,15 @@ class VirusPredictor
     end
 
     # #predicts speed of spread using population density
-    def speed_of_spread(population_density, state)
+    def speed_of_spread
       # declare a speed variable set equal to default value (2.5)
       speed = 2.5
       # create hash with benchmarks 
       speed_factor = { 200 => 0.5, 150 => 1, 100 => 1.5, 50 => 2 }
       # iterate over the hash's keys in descending order
       speed_factor.keys.sort.reverse.each do |pop_density|
-        next if @population_density < pop_density
         # when we find the key that is immediately under population density
-
+        next if @population_density < pop_density
         # set speed equal to the key's value in the hash
         speed = speed_factor[pop_density]
         break
