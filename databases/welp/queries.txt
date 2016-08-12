@@ -1,0 +1,26 @@
+1.
+
+
+
+
+
+2. sqlite> SELECT * FROM 
+   ...> from [reviews] r
+   ...> join users u ON r.user_id = u.id
+   ...> join businesses b ON r.business_id = b.id
+   ...> ;
+2|That wasn't even an 1/8 of a pound!|Bob|Vila|Mcdonalds
+5|Best meal ever!!|Chad|Wick|Nobu
+4|Juiciest burger on the block!|Jimmy|Choo|Shake Shack
+sqlite> 
+
+
+3. sqlite> select r.stars, r.comment, u.first_name, u.last_name, b.name
+   ...> from [reviews] r
+   ...> join users u ON r.user_id = u.id
+   ...> join businesses b ON r.business_id = b.id
+   ...> ;
+2|That wasn't even an 1/8 of a pound!|Bob|Vila|Mcdonalds
+5|Best meal ever!!|Chad|Wick|Nobu
+4|Juiciest burger on the block!|Jimmy|Choo|Shake Shack
+
