@@ -45,4 +45,18 @@ sqlite> SELECT * FROM users;
 3|Inkantisha James|queeninka@hotmail.com|93olels;lfhv,mzha004
 sqlite> 
 
+RELEASE 3: 
+
+sqlite> SELECT name, email, subject, text from help_requests h
+   ...> JOIN users u ON h.user_id = u.id
+   ...> WHERE responded="true";
+Jane Smith|jsmith@gmail.com|Virus problems|Hi, I have a virus that is making it impossible to access the internet, it just keeps going to nastypics.com! Please help!!
+Inkantisha James|queeninka@hotmail.com|connection problems|My wifi keeps dropping like three or four times a day.  Is there something wrong with my computer or is it your program??
+sqlite> 
+
+sqlite> SELECT email, subject FROM help_requests h
+   ...> JOIN users u ON h.user_id = u.id
+   ...> WHERE name="Jane Smith";
+jsmith@gmail.com|Virus problems
+sqlite> 
 
