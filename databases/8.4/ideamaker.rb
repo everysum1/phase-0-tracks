@@ -52,6 +52,8 @@ if current_db.empty?
   end
 end
 
+seed_row(db)
+
 # ideas = db.execute("SELECT * FROM idea_lists")
 # ideas.each do |list|
 #   puts list.inspect
@@ -60,13 +62,19 @@ end
 ### DRIVER CODE ###
 puts 
 puts "*******************************IDEA MAKER**************************************************************"
+puts
 puts "As wise men say, the mind is a muscle."
 puts "Let's train yours to come up with the next big thing..."
 puts "We're going to make a list of 10 ideas."
 puts "Don't worry, they don't have to be good...we just gotta get those reps in!" 
-puts "Do you want to see the last list you made before we get started? Type 'y' for yes, OR any other key to skip the review..."
+print "Do you want to see the last list you made before we get started? Type 'y' for yes, OR any other key to skip the review...     "
+puts
 previous = gets.chomp
 if previous.downcase == 'y'
+  puts
+  puts
+  puts "Here is your last list..."
+  puts
   database = db.execute("SELECT * FROM idea_lists;")
   # puts database.last.inspect
   database.last.each_with_index do |idea, idx|
@@ -80,14 +88,18 @@ end
 response = ''
 
 until response == 'y'
+  puts 
   until response.downcase == "quit"
+    puts
     puts "Ok, are you ready? Let's begin:"
+    puts
     idea_list = []
     10.times do |x|
       # ask for an idea with number
       puts "What's idea number #{x+1}?"
       # save that idea in a variable
       idea = gets.chomp
+      puts
       # push that variable into a list
       idea_list << idea 
     end
@@ -105,10 +117,16 @@ until response == 'y'
     end
 
     puts
-    puts "Let's do another list! Enter 'y' when you're ready to begin or enter 'quit' to exit this app.."
+    puts "Let's do another list! Press any key when you're ready to begin or enter 'quit' to exit this app.."
     response = gets.chomp
   end
-
+  puts
   puts "Are you sure you want to quit? Come on, one more list..."
   puts "Type 'y' if you REALLY want to quit, or any other letter to get back to comin up with BRILLIANT ideas..."
+  response = gets.chomp
 end
+puts
+puts "Ok, bye for now. Let's train later ;-)"
+puts
+puts "***************************************************************************"
+puts
