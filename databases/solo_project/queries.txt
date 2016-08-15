@@ -1,0 +1,48 @@
+1. Information from one table: 
+
+sqlite> select * from users;
+1|Jane Smith|jsmith@gmail.com|iekd802394hjfkalskdfu
+2|Bobby Lane|blane@gmail.com|iek009i3,ksdfjskd299l
+3|Inkantisha James|queeninka@hotmail.com|93olels;lfhv,mzha004
+sqlite> 
+
+2. Update an item that meets some criteria: 
+
+sqlite> select * from help_requests;
+1|Virus problems|Hi, I have a virus that is making it impossible to access the internet, it just keeps going to nastypics.com! Please help!!|false|1
+2|email help|I am having a problem sending emails to more than one person.  Can I get help with this?|false|2
+3|connection problems|My wifi keeps dropping like three or four times a day.  Is there something wrong with my computer or is it your program??|true|3
+
+sqlite> UPDATE help_requests SET responded="true" WHERE user_id=1;
+
+sqlite> select * from help_requests;
+1|Virus problems|Hi, I have a virus that is making it impossible to access the internet, it just keeps going to nastypics.com! Please help!!|true|1
+2|email help|I am having a problem sending emails to more than one person.  Can I get help with this?|false|2
+3|connection problems|My wifi keeps dropping like three or four times a day.  Is there something wrong with my computer or is it your program??|true|3
+
+3. Display information in both tables using one query:
+
+sqlite> SELECT * FROM users, help_requests WHERE users.id = help_requests.user_id;
+1|Jane Smith|jsmith@gmail.com|iekd802394hjfkalskdfu|1|Virus problems|Hi, I have a virus that is making it impossible to access the internet, it just keeps going to nastypics.com! Please help!!|true|1
+2|Bobby Lane|blane@gmail.com|iek009i3,ksdfjskd299l|2|email help|I am having a problem sending emails to more than one person.  Can I get help with this?|false|2
+3|Inkantisha James|queeninka@hotmail.com|93olels;lfhv,mzha004|3|connection problems|My wifi keeps dropping like three or four times a day.  Is there something wrong with my computer or is it your program??|true|3
+sqlite> 
+
+4. Display a narrower selection of columns: 
+
+sqlite> SELECT users.name, help_requests.subject, help_requests.responded FROM users JOIN help_requests on users.id = help_requests.user_id;
+Jane Smith|Virus problems|true
+Bobby Lane|email help|false
+Inkantisha James|connection problems|true
+sqlite> 
+
+5. Delete an item that meets some condition:
+
+sqlite> DELETE FROM users 
+   ...> WHERE name="Bobby Lane";
+sqlite> SELECT * FROM users;
+1|Jane Smith|jsmith@gmail.com|iekd802394hjfkalskdfu
+3|Inkantisha James|queeninka@hotmail.com|93olels;lfhv,mzha004
+sqlite> 
+
+
