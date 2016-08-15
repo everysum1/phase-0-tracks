@@ -1,0 +1,16 @@
+#center { 
+  width: 25%;
+  background-color:  lightgrey;
+  margin: 10% 20%;
+  padding: 5% 1%;
+  display: inline-block;
+}
+
+#btn {
+  text-align: center;
+  font-size: 3em;
+  padding: 10% 10%;
+  margin: 5% 10%;
+  border: 3px dashed red;
+  border-radius: 5px;
+}
