@@ -12,7 +12,9 @@ sqlite> select * from help_requests;
 1|Virus problems|Hi, I have a virus that is making it impossible to access the internet, it just keeps going to nastypics.com! Please help!!|false|1
 2|email help|I am having a problem sending emails to more than one person.  Can I get help with this?|false|2
 3|connection problems|My wifi keeps dropping like three or four times a day.  Is there something wrong with my computer or is it your program??|true|3
+
 sqlite> UPDATE help_requests SET responded="true" WHERE user_id=1;
+
 sqlite> select * from help_requests;
 1|Virus problems|Hi, I have a virus that is making it impossible to access the internet, it just keeps going to nastypics.com! Please help!!|true|1
 2|email help|I am having a problem sending emails to more than one person.  Can I get help with this?|false|2

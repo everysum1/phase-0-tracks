@@ -1,26 +1,31 @@
-1.
+1. Join 3 tables in one query: 
 
-
-
-
-
-2. sqlite> SELECT * FROM 
-   ...> from [reviews] r
-   ...> join users u ON r.user_id = u.id
-   ...> join businesses b ON r.business_id = b.id
-   ...> ;
-2|That wasn't even an 1/8 of a pound!|Bob|Vila|Mcdonalds
-5|Best meal ever!!|Chad|Wick|Nobu
-4|Juiciest burger on the block!|Jimmy|Choo|Shake Shack
+sqlite> SELECT * FROM reviews r
+   ...> JOIN users u ON r.user_id = u.id
+   ...> JOIN businesses b ON r.business_id = b.id;
+1|1|Not as good as Burger King!|1|1|1|Bob|Burgerking|1|McDonalds
+2|5|The classics done right!|2|4|4|Derek|Mason|2|Nobu
+3|4|This was the best burger ever.|3|2|2|Sally|Sutherford|3|Shake Shack
+4|3|The shakes were the best part, the rest was ok|4|3|3|Barbie|Santos|4|Mel's Diner
 sqlite> 
 
+2. Join 3 tables and display selected relevant columns in one query:
 
-3. sqlite> select r.stars, r.comment, u.first_name, u.last_name, b.name
-   ...> from [reviews] r
-   ...> join users u ON r.user_id = u.id
-   ...> join businesses b ON r.business_id = b.id
-   ...> ;
-2|That wasn't even an 1/8 of a pound!|Bob|Vila|Mcdonalds
-5|Best meal ever!!|Chad|Wick|Nobu
-4|Juiciest burger on the block!|Jimmy|Choo|Shake Shack
+sqlite> SELECT first_name, last_name, name, stars, comment 
+   ...> FROM reviews r
+   ...> JOIN users u ON r.user_id = u.id
+   ...> JOIN businesses b ON r.business_id = b.id;
+Bob|Burgerking|McDonalds|1|Not as good as Burger King!
+Derek|Mason|Nobu|5|The classics done right!
+Sally|Sutherford|Shake Shack|4|This was the best burger ever.
+Barbie|Santos|Mel's Diner|3|The shakes were the best part, the rest was ok
+sqlite> 
 
+3. Display relevant data on all three tables for ONE particular business: 
+
+sqlite> SELECT * FROM reviews r
+   ...> JOIN users u ON r.user_id = u.id
+   ...> JOIN businesses b ON r.business_id = b.id
+   ...> WHERE b.id = 1;
+1|1|Not as good as Burger King!|1|1|1|Bob|Burgerking|1|McDonalds
+sqlite> 
