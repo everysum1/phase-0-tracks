@@ -7,6 +7,16 @@ set :public_folder, File.dirname(__FILE__) + '/static'
 db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
 
+create_feedback_table = <<-sequel
+	CREATE TABLE IF NOT EXISTS feedback(
+		id INTEGER PRIMARY KEY,
+		name VARCHAR(255),
+		feedback TEXT(2000)
+	);
+sequel
+
+db.execute(create_feedback_table)
+
 # show students on the home page
 get '/' do
   @students = db.execute("SELECT * FROM students")
@@ -29,4 +39,13 @@ end
 get '/groups' do 
 	@students = db.execute("Select * FROM students")
 	erb :groups
+end
+
+get '/feedback' do 
+	erb :feedback
+end
+
+post '/feedback' do 
+	db.execute("INSERT INTO feedback (name, feedback) VALUES (?, ?)", [params['name'], params['feedback']])
+	redirect '/groups'
 end
