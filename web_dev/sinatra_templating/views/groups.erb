@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accountability Groups</title>
+</head>
+<body>
+	<h1>Accountability Groups</h1>
+	<br>
+		<a href="/feedback"><button>Submit Feedback</button></a>
+	<br>
+	<% 10.times do |num| %>
+		<h2>Group <%= num+1 %></h2>	
+		<% 5.times do |stu| %>
+			<p><%= @students[num*5+stu]['name'] %>, <%= @students[num*5+stu]['campus'] %></p>
+		<% end %> 
+	<% end %>
+</body>
+</html>
