@@ -62,6 +62,15 @@ get '/:num1/add/:num2' do
   "The sum is: #{params[:num1].to_i + params[:num2].to_i}"
 end 
 
+get '/search' do 
+  this_name = params[:name]
+  results = ''
+  students = db.execute(SELECT * FROM students)
+  students.filter { |student| student.name = this_name }.each do |student|
+    response << "#{student['name']}<br>"
+  end 
+  response
+end
 
 
 
